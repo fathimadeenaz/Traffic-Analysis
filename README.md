@@ -1,1 +1,1 @@
-# MiniPro
+# MiniProject
