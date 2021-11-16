@@ -1,41 +1,62 @@
 from tkinter import *
 from tkinter import filedialog
-from PIL import ImageTk,Image
+import mypack as mp
 
-window=Tk()
-
-
-lbl=Label(window, text="Welcome to Tooly!", fg='red', font=("Helvetica", 16))
-lbl.pack(padx=5, pady=10)
-
-def cam():
-
-    return 
-
-def tooly():
-
-    return
-
-def snap():
-    cam()
-    tooly()
-    return
+root=Tk()
 
 def upload():
 
-    window.filename = filedialog.askopenfilename(initialdir=r"C:\Users\Deenaz\Pictures\FURNITURE", title="Select A File",filetypes=(("jpg files", "*.jpg"),("all files", "*.*")))
-    #print(window.filename)
-    #my_label = Label(window, text=window.filename).pack()
-    #my_image = ImageTk.PhotoImage(Image.open(window.filename))
-    #my_image_label = Label(image=my_image).pack()
-    tooly()
+    root.filename = filedialog.askopenfilename(initialdir=r"C:\Users\Deenaz\Pictures\FURNITURE", title="Select A File",filetypes=(("jpg files", "*.jpg"),("all files", "*.*")))
+    mp.foo(root.filename)
 
+def page1(root):
+    page = Frame(root)
+    page.pack()
+    Label(page, text = 'WELCOME', fg='red', font=("Helvetica", 16)).pack(padx=5, pady=10, side="top", fill="both", expand=True)
+    Button(page, text = 'VIDEO', fg='blue', command = changepage1).pack(padx=5, pady=10, side="top", fill="both", expand=True)
+    Button(page, text = 'IMAGE', fg='blue', command = changepage2).pack(padx=5, pady=10, side="top", fill="both", expand=True)
 
-btn1=Button(window, text="SNAP", fg='blue', command=snap).pack(padx=5, pady=10)
+def page2a(root):
+    page = Frame(root)
+    page.pack()
+    Label(page, text = 'VIDEO', fg='red', font=("Helvetica", 16)).pack(padx=5, pady=10, side="top", fill="both", expand=True)
+    Button(page, text = 'PROCEED', fg='blue', command = upload).pack(padx=5, pady=10, side="top", fill="both", expand=True)
+    Button(page, text = 'BACK', fg='blue', command = changepage1).pack(padx=5, pady=10, side="top", fill="both", expand=True)
 
-btn2=Button(window, text="UPLOAD", fg='blue',command=upload).pack(padx=5, pady=10)
+def page2b(root):
+    page = Frame(root)
+    page.pack()
+    Label(page, text = 'IMAGE', fg='red', font=("Helvetica", 16)).pack(padx=5, pady=10, side="top", fill="both", expand=True)
+    Button(page, text = 'PROCEED', fg='blue', command = upload).pack(padx=5, pady=10, side="top", fill="both", expand=True)
+    Button(page, text = 'BACK', fg='blue', command = changepage2).pack(padx=5, pady=10, side="top", fill="both", expand=True)
 
+def changepage1():
+    global pagenum, root
+    for widget in root.winfo_children():
+        widget.destroy()
+    if pagenum == 1:
+        page2a(root)
+        pagenum = 2
+    else:
+        page1(root)
+        pagenum = 1
 
-window.title('tooly')
-window.geometry("300x200+10+10")
-window.mainloop()
+def changepage2():
+    global pagenum, root
+    for widget in root.winfo_children():
+        widget.destroy()
+    if pagenum == 1:
+        page2b(root)
+        pagenum = 2
+    else:
+        page1(root)
+        pagenum = 1
+
+pagenum = 1
+
+page1(root)
+
+root.title('XXX')
+root.geometry("400x250+450+200")
+
+root.mainloop()
