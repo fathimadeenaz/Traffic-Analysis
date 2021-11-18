@@ -1,22 +1,22 @@
-## UI :
+UI :
 
-######https://www.youtube.com/watchv=_PHJvjQJa3w&ab_channel=edureka%21
+https://www.youtube.com/watchv=_PHJvjQJa3w&ab_channel=edureka%21
 
-###### https://www.youtube.com/watch?v=YXPyB4XeYLA&ab_channel=freeCodeCamp.org
+https://www.youtube.com/watch?v=YXPyB4XeYLA&ab_channel=freeCodeCamp.org
 
-###### https://python-course.eu/tkinter_layout_management.php
-
-
-## COUNTING, CLASSIFICATION AND TRACKING :
-
-###### https://thecleverprogrammer.com/2021/05/11/count-objects-in-image-using-python/
-
-###### https://techvidvan.com/tutorials/opencv-vehicle-detection-classification-counting/
+https://python-course.eu/tkinter_layout_management.php
 
 
-## EXTRA FEATURES :
+COUNTING, CLASSIFICATION AND TRACKING :
 
-###### Speed Detection
+https://thecleverprogrammer.com/2021/05/11/count-objects-in-image-using-python/
+
+https://techvidvan.com/tutorials/opencv-vehicle-detection-classification-counting/
+
+
+EXTRA FEATURES :
+
+Speed Detection
 > https://github.com/kraten/vehicle-speed-check
 
 
