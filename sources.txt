@@ -23,6 +23,11 @@ https://thecleverprogrammer.com/2021/05/11/count-objects-in-image-using-python/
 https://techvidvan.com/tutorials/opencv-vehicle-detection-classification-counting/
 
 
+DOC :
+
+http://www.ijiere.com/FinalPaper/FinalPaper20155311241655.pdf
+
+
 EXTRA FEATURES :
 
 Speed Detection
