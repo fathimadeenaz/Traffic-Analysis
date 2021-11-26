@@ -7,7 +7,16 @@ https://www.youtube.com/watch?v=YXPyB4XeYLA&ab_channel=freeCodeCamp.org
 https://python-course.eu/tkinter_layout_management.php
 
 
-COUNTING, CLASSIFICATION AND TRACKING :
+YOLOV3 :
+
+https://www.section.io/engineering-education/introduction-to-yolo-algorithm-for-object-detection/
+
+https://www.analyticsvidhya.com/blog/2018/12/practical-guide-object-detection-yolo-framewor-python/
+
+https://www.youtube.com/watch?v=ag3DLKsl2vk&ab_channel=codebasics
+
+
+CODE :
 
 https://thecleverprogrammer.com/2021/05/11/count-objects-in-image-using-python/
 
@@ -20,14 +29,3 @@ Speed Detection
 > https://github.com/kraten/vehicle-speed-check
 
 
-
-
-
-*************************************************************************************************
-FUNC
-https://www.pyimagesearch.com/2020/08/24/ocr-handwriting-recognition-with-opencv-keras-and-tensorflow/
-
-https://towardsdatascience.com/build-a-handwritten-text-recognition-system-using-tensorflow-2326a3487cd5
-
-TO PDF
-*************************************************************************************************
