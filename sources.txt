@@ -9,6 +9,8 @@ https://python-course.eu/tkinter_layout_management.php
 
 YOLOV3 :
 
+https://www.pyimagesearch.com/2018/11/12/yolo-object-detection-with-opencv/
+
 https://www.section.io/engineering-education/introduction-to-yolo-algorithm-for-object-detection/
 
 https://www.analyticsvidhya.com/blog/2018/12/practical-guide-object-detection-yolo-framewor-python/
