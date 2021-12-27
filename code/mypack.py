@@ -9,7 +9,7 @@ def foo(path) :
     tracker = EuclideanDistTracker()
 
     # Initialize the videocapture object
-    cap = cv2.VideoCapture(r"C:\Users\Deenaz\Documents\Python\MiniPro\code\videos\v (1).webm")
+    cap = cv2.VideoCapture(path)
 
     input_size = 320
 
@@ -62,6 +62,7 @@ def foo(path) :
         return cx, cy
 
     # List for store vehicle count information
+    global up_list, down_list
     temp_up_list = []
     temp_down_list = []
     up_list = [0, 0, 0, 0]
@@ -186,11 +187,25 @@ def foo(path) :
             cv2.imshow('Output', img)
 
             if cv2.waitKey(1) == ord('q'):
-                break
+                global result
+                result = up_list+down_list
+                cap.release()
+                cv2.destroyAllWindows()
+                return result
+
 
             
-        cap.release()
-        cv2.destroyAllWindows()
+        # cap.release()
+        # cv2.destroyAllWindows()
+        
+        # return result
+
+    #if __name__ == '__main__':
+    # realTime()
+
+    #result = up_list.append(down_list)
+    #result = [up_list[0], up_list[1], up_list[2], up_list[3], down_list[0], down_list[1], down_list[2],down_list[3]]
+    #return result
 
 
-    realTime()
+    return realTime()
