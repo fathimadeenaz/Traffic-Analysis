@@ -1,15 +1,12 @@
-
 import math
+
 
 class EuclideanDistTracker:
 
     def __init__(self):
         # Store the center positions of the objects
         self.center_points = {}
-        # Keep the count of the IDs
-        # each time a new object id detected, the count will increase by one
         self.id_count = 0
-
 
     def update(self, objects_rect):
         # Objects boxes and ids
@@ -47,10 +44,4 @@ class EuclideanDistTracker:
             new_center_points[object_id] = center
 
         # Update dictionary with IDs not used removed
-        self.center_points = new_center_points.copy()
-        return objects_bbs_ids
-
-
-
-#def ad(a, b):
-#   return a+b
+        self.center_points = 
