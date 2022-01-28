@@ -30,6 +30,7 @@ def page2b(root):
     Button(page, text = 'PROCEED', fg='blue', command = upload).pack(padx=5, pady=10, side="top", fill="both", expand=True)
     Button(page, text = 'BACK', fg='blue', command = changepage2).pack(padx=5, pady=10, side="top", fill="both", expand=True)
 
+#multipage functionality
 def changepage1():
     global pagenum, root
     for widget in root.winfo_children():

@@ -6,7 +6,7 @@ import mypack as mp
 root = Tk()
 root.geometry("850x480")
 
-
+#upload funtion
 def upload():
 
     global res
