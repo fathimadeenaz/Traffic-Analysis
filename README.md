@@ -17,4 +17,4 @@ The second section of the project involves classification of vehicles. This is d
 
 ## What does the app do?
 
-The user inputs video recording
+The user inputs traffic surveillance video saved locally. The algorithm outputs the results on the video as well as the UI. It can also be saved in the form of a csv file depending upon user preference.
