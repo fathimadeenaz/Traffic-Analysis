@@ -13,7 +13,8 @@ The second section of the project involves classification of vehicles. This is d
 -   Python v3.9.2
 -   OpenCV v4.5.3
 -   Numpy v1.19.5
--   YOLOv3 pre-trained model weights and config files
+-   YOLOv4 Algortihm
+-   Coco weights and config files
 
 ## What does the app do?
 
