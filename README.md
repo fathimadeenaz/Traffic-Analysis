@@ -13,8 +13,9 @@ The second section of the project involves classification of vehicles. This is d
 -   Python v3.9.2
 -   OpenCV v4.5.3
 -   Numpy v1.19.5
--   YOLOv3 pre-trained model weights and config files
+-   YOLOv4 Algortihm
+-   Coco weights and config files
 
 ## What does the app do?
 
-The user inputs video recording
+The user inputs traffic surveillance video saved locally. The algorithm outputs the results on the video as well as the UI. It can also be saved in the form of a csv file depending upon user preference.
