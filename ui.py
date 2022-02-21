@@ -17,6 +17,10 @@ root.resizable(False, False)
 
 root.config(bg="#222b4f")
 
+photo = PhotoImage(
+    file=r"C:\Users\Deenaz\Documents\Python\MiniPro\UI\icon.png")
+root.iconphoto(False, photo)
+
 
 def upload():
 
