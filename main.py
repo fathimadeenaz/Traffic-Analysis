@@ -34,10 +34,6 @@ def foo(path):
     # configure the network model
     net = cv2.dnn.readNetFromDarknet(modelConfiguration, modelWeigheights)
 
-    # Configure the network backend
-    net.setPreferableBackend(cv2.dnn.DNN_BACKEND_CUDA)
-    net.setPreferableTarget(cv2.dnn.DNN_TARGET_CUDA)
-
     # Define random colour for each class
     np.random.seed(42)
     colors = np.random.randint(0, 255, size=(
@@ -174,9 +170,11 @@ def foo(path):
             cv2.putText(img, "Van:        "+str(up_list[3])+"     " + str(
                 down_list[3]), (20, 100), cv2. FONT_HERSHEY_SIMPLEX, font_size, font_color, font_thickness)
 
+            cv2.putText(img, "Press Esc to exit Window", (840, 25),
+                        cv2. FONT_HERSHEY_SIMPLEX, font_size, (0, 0, 0), 1)
             cv2.imshow('Output', img)
 
-            if cv2.waitKey(1) == ord('q'):
+            if cv2.waitKey(1) == 27:
                 global result
                 result = up_list+down_list
                 cap.release()
