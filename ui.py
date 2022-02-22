@@ -1,10 +1,7 @@
-# with csv file
-
-
 from tkinter import *
 from tkinter import filedialog
 import pandas as pd
-import main
+import mypack as mp
 
 from tkinter import messagebox
 
@@ -18,7 +15,7 @@ root.resizable(False, False)
 root.config(bg="#222b4f")
 
 photo = PhotoImage(
-    file=r"C:\Users\Deenaz\Documents\Python\MiniPro\UI\icon.png")
+    file=r"C:\Users\noore\OneDrive\Desktop\project\Vehicle-Classification-and-Counting\videos\background.png")
 root.iconphoto(False, photo)
 
 
@@ -27,7 +24,7 @@ def upload():
     global res
     root.filename = filedialog.askopenfilename(initialdir=r"C:\Users\Deenaz\Documents\Python\MiniPro\videos",
                                                title="Select A File", filetypes=(("mp4 files", "*.mp4"), ("all files", "*.*")))
-    res = main.foo(root.filename)
+    res = mp.foo(root.filename)
     changepage2()
 
 
@@ -37,7 +34,7 @@ def save():
     d1 = pd.DataFrame(rows, columns=cols)
     d1['Upwards'] = res[0:4]
     d1['Downwards'] = res[4:8]
-    d1.to_csv(r"C:\Users\Deenaz\Documents\Python\MiniPro\output.csv")
+    d1.to_csv(r"C:\Users\noore\OneDrive\Desktop\project\output.csv")
 
 
 # def showmsg(page):
@@ -54,13 +51,16 @@ def save():
 #                         fill="pink", font=("Lato", 18))
 #     root.mainloop()
 
-def showmsg():
-    messagebox.showinfo("Notification", "File has been successfully saved")
+def showmsg(canvas1):
+    #messagebox.showinfo("Notification", "File has been successfully saved")
+
+    canvas1.create_text(422, 422, text="File Saved!",
+                        fill="#d2d2d7", font=('Helvatica 15'))
 
 
 def page1(root):
     bg = PhotoImage(
-        file=r"C:\Users\Deenaz\Documents\Python\MiniPro\UI\bg.png")
+        file=r"C:\Users\noore\OneDrive\Desktop\project\Vehicle-Classification-and-Counting\videos\background.png")
 
     canvas1 = Canvas(root, width=400, height=400)
 
@@ -80,7 +80,8 @@ def page1(root):
 
 
 def page2(root):
-    bg = PhotoImage(file=r"C:\Users\Deenaz\Documents\Python\MiniPro\UI\bg.png")
+    bg = PhotoImage(
+        file=r"C:\Users\noore\OneDrive\Desktop\project\Vehicle-Classification-and-Counting\videos\background.png")
 
     canvas1 = Canvas(root, width=400, height=400)
 
@@ -147,7 +148,8 @@ def page2(root):
 #         row=17, column=3, columnspan=2)
 
 def page3(root):
-    bg = PhotoImage(file=r"C:\Users\Deenaz\Documents\Python\MiniPro\UI\bg.png")
+    bg = PhotoImage(
+        file=r"C:\Users\noore\OneDrive\Desktop\project\Vehicle-Classification-and-Counting\videos\background.png")
 
     canvas1 = Canvas(root, width=400,
                      height=400)
@@ -193,11 +195,10 @@ def page3(root):
     canvas1.create_text(600, 305, text=res[7],
                         fill="#d2d2d7", font=("Lato", 18))
 
-    button3 = Button(root, text="       SAVE       ", bg="#4467fd", fg="#d2d2d7", font=(
-        "Lato", 20), command=lambda: [save(), showmsg()])
+    button3 = Button(root, text="       Save       ", bg="#4467fd", fg="#d2d2d7", font=(
+        "Lato", 18), command=lambda: [save(), showmsg(canvas1)])
 
-    button3_canvas = canvas1.create_window(
-        330, 350, anchor="nw", window=button3)
+    button3.place(x=330, y=350)
 
     root.mainloop()
 
