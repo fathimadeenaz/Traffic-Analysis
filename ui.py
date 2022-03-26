@@ -57,7 +57,7 @@ def page1(root):
     canvas1.create_text(420, 180, text = "TRAFFIC ANALYSIS",
         fill = "#d2d2d7", font = ('Helvatica 50 bold'))
 
-    button3 = Button(root, text="       Begin       ", bg = "#4467fd",
+    button3 = Button(root, text="       BEGIN       ", bg = "#4467fd",
         fg = "#d2d2d7", font = ("Lato", 20), command = changepage1)
     button3_canvas = canvas1.create_window(
         325, 270, anchor = "nw", window = button3)
