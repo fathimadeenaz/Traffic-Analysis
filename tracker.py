@@ -2,22 +2,22 @@
 
 import math
 
-
 class EuclideanDistTracker:
 
     # ctr
 
     def __init__(self):
-        # Stores center positions of objects
+        # Stores center positions of objects as { id : (cx,cy) }
         self.center_points = {}
         # Keeps count of the IDs and each time a new object is detected, count increases by one
         self.id_count = 0
 
-    # Tracks objects and updates detected objects' current states
+    # Tracks objects and updates detected objects' current states in each frame
 
     def update(self, objects_rect):
-        # objects_rect is an array containing detected objects' positional info
-        # Array containing info about the objects that have been detected and are present in current frame
+        # objects_rect is a list containing detected objects' positional info [(x,y,w,h,index)]
+
+        # List containing positional info about the objects that have been detected and are present in current frame
         objects_bbs_ids = []
 
         # Getting center point of detected objects
@@ -33,7 +33,6 @@ class EuclideanDistTracker:
 
                 if dist < 25:
                     self.center_points[id] = (cx, cy)
-                    # print(self.center_points)
                     objects_bbs_ids.append([x, y, w, h, id, index])
                     same_object_detected = True
                     break
@@ -52,6 +51,6 @@ class EuclideanDistTracker:
             center = self.center_points[object_id]
             new_center_points[object_id] = center
 
-        # Updating centre_points dictionary
+        # Updating center_points dictionary
         self.center_points = new_center_points.copy()
         return objects_bbs_ids
