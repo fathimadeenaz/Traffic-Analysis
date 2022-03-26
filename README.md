@@ -11,11 +11,35 @@ The second section of the project involves classification of vehicles. This is d
 ## Software Requirements
 
 -   Python v3.9.2
+-   YOLOv4 model weights and config files
+-   Coco.names file
 -   OpenCV v4.5.3
 -   Numpy v1.19.5
--   YOLOv4 Algortihm
--   Coco weights and config files
+-   Pandas v1.4.1
+-   Tkinter v3.10.2
 
-## What does the app do?
+## Implementation
 
-The user inputs traffic surveillance video saved locally. The algorithm outputs the results on the video as well as the UI. It can also be saved in the form of a csv file depending upon user preference.
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/63476604/160245731-524aa3ba-5354-4426-8abd-eabc35704e0a.png" alt="Home Page">
+  <div>When the app is run, the Home Page is displayed</div>
+</div>
+<br>
+<br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/63476604/160245292-742fde8b-93c8-42ad-9a74-5bbd12fcc176.png" alt="Input Video">
+  <div>The user is then prompted to input a video of his choice</div>
+</div>
+<br>
+<br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/63476604/160245430-c3de3fa9-aa2f-4d6f-96f9-1b0a23122ea7.png" alt="Output Frame">
+  <div>Output frame is displayed wherein detection, classification and counting of vehicles in the user selected video takes place</div>
+</div>
+<br>
+<br>
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/63476604/160245518-cec0065b-93d5-4d43-ae79-5f10962c9752.png" alt="Results Page">
+  <div>Upon exiting the output frame, the results page is displayed with the option of saving the results locally in a CSV file</div>
+</div>
+<br>
