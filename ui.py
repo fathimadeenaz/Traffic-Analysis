@@ -156,9 +156,6 @@ def changepage2():
     page3(root)
 
 # Running the app
-
 pagenum = 1
-
 page1(root)
-
 root.mainloop()
