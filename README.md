@@ -25,15 +25,18 @@ The second section of the project involves classification of vehicles. This is d
   <div>When the app is run, the Home Page is displayed</div>
 </div>
 <br>
+<br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/63476604/160245292-742fde8b-93c8-42ad-9a74-5bbd12fcc176.png" alt="Input Video">
   <div>The user is then prompted to input a video of his choice</div>
 </div>
 <br>
+<br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/63476604/160245430-c3de3fa9-aa2f-4d6f-96f9-1b0a23122ea7.png" alt="Output Frame">
   <div>Output frame is displayed wherein detection, classification and counting of vehicles in the user selected video takes place</div>
 </div>
+<br>
 <br>
 <div align="center">
   <img src="https://user-images.githubusercontent.com/63476604/160245518-cec0065b-93d5-4d43-ae79-5f10962c9752.png" alt="Results Page">
